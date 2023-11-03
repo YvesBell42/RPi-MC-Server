@@ -1,6 +1,6 @@
 # RPi MC Server Optimisation and Automation with Reverse Proxy
 
-This project describes the setup, optimisation and automation of a Raspberry Pi Minecraft server behind a GC-NAT.
+This project describes the setup, optimisation and automation of a Raspberry Pi Minecraft server behind with a reverse proxy.
 
 A Raspberry Pi is not the ideal platform to run a Minecraft server, but can be perfect for a small number of friends wishing to play together (especially when optimised and automated). 
 
@@ -10,9 +10,11 @@ The Raspberry Pi 4b can offer 8GB of memory which allows for a large allocation 
 
 The use of a RAM Disk means that the storage device used only affects the speed of server start, restart, saving and backup. However, fast storage wouldn't be missed, such as from a fast USB drive, external NVMe adpated to USB3.0 (with powered HUB) or even PCIe SSD with the Raspberry Pi 5. I decided to use a ADATA XPG SX8200 Pro 256GB adpated to USB3.0 with an enclosure (https://www.amazon.co.uk/gp/product/B07TXCMQ8B) and powered hub (https://www.amazon.co.uk/RSHTECH-Aluminum-Portable-Splitter-Individual/dp/B07KFGY2CR).
 
-Overclocking the Raspbery Pi has the most impactful performance improvement but will require active cooling (Raspberry Pi 5 needs cooling anyway). A small fan and/or heatsink may be enough, but I opted for the overkill ICE Tower (https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler) just in case, and because it looks cool :sunglasses:.
+Overclocking the Raspbery Pi has the most impactful performance improvement but will require active cooling (Raspberry Pi 5 needs cooling anyway). A small fan and/or heatsink may be enough, but I opted for the overkill ICE Tower (https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler) just in case, and because it looks cool :sunglasses:
 
 ![ICE Tower Raspberry Pi 4 CPU Cooler](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/40789c81-c50c-480e-8851-6c23017c478f)
+
+A PaperMC (https://papermc.io/) server performs better than the native jar files alone, and allows for plugins if you so choose. This combined with tailored java flags can provide a much smoother experience.
 
 Unfortunately for me but now hopefully fortunate for someone else, when I changed internet service provider I found myself stuck behind a Carrier Grade NAT, and unable to use port forwarding effectively. This led me to look into reverse tunnels and proxies, where I found the service ngrok (https://ngrok.com). ngrok can be used to access servers without port forwarding, but the addresses are dynamic and change seemingly randomly. They do offer static addresses through a subscription, but as I could have much easier (and cheaper) bought a subscription to a Minecraft server hosting, I decided to go around this. Instead automatically polling ngrok for a change in address, and using Git to update the README of an empty GitHub repository. This gives easy access to the latest address when it changes without your help (https://github.com/YvesBell42/RPi-PaperMC).
 
