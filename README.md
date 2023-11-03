@@ -41,17 +41,9 @@ Rasberry Pi 64-bit OS (Headless as GUI Optional)
   
   - screen
  
-  - PaperMC
  
   - java jdk / jre
  
-  - ChunkLoader
-
-  - Reverse Proxy (ngrok)
-
-    https://ngrok.com/
-
-
 RAM Disk:
 
 sudo mkdir <PATH_TO_RAM_DISK_SERVER_FOLDER>
