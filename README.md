@@ -6,7 +6,13 @@ A Raspberry Pi is not the ideal platform to run a Minecraft server, but can be p
 
 The hardware optimisations described enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server would function fine without these optimisations.
 
-The Raspberry Pi 4b can offer 8GB of memory, which allows for a large allocation of RAM to the server and more that could be used as a RAM Disk. Running the server off a RAM Disk means pre-generated chunks are loaded much faster, but adds some risk and complications.
+The Raspberry Pi 4b can offer 8GB of memory which allows for a large allocation of RAM to the server, and more that could be used as a RAM Disk. Running the server off a RAM Disk means pre-generated chunks are loaded much faster, but adds some risk of data corruption if handled badly. The automation scripts have been designed to prevent associated corruption and offer regular restore points in the case. The use of a RAM Disk means that the storage device used only affects the speed of server start, restart and saving. 
+
+Overclocking the Raspbery Pi has the most impactful performance improvement but will require active cooling (Raspberry Pi 5 needs cooling anyway). A small fan and/or heatsink may be enough, but I opted for the overkill ICE Tower just in case and because it looks cool :).
+
+![ICE Tower Raspberry Pi 4 CPU Cooler](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/40789c81-c50c-480e-8851-6c23017c478f)
+
+https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
 
 
 
@@ -15,14 +21,6 @@ The Raspberry Pi 4b can offer 8GB of memory, which allows for a large allocation
 
 
 
-
-
-
-
-
-Essentially everything described is optional, however I have done my best to describe the process and dependencies to prevent things going wrong if not done the same.
-
-The Raspberry Pi 4b has an 8GB model which is more than enough to alleviate a memory bottleneck when it comes to running a Minecraft Server. However, a Raspberry Pi is not the ideal platform to run a Minecraft Server in the first place, but the additional RAM allows for the implementation of a RAM Disk for faster chunk loading. The speed of s
 
 Hardware:
 - Raspberry Pi 4b (8GB Model)
@@ -39,9 +37,6 @@ force_turbo=1 (voids warranty)
   
 - Active Cooling
 
-![ICE Tower Raspberry Pi 4 CPU Cooler](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/40789c81-c50c-480e-8851-6c23017c478f)
-
-https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
 
 - Storage
 
