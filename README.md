@@ -8,6 +8,8 @@ Hardware:
 - Overclocking
   arm_freq=2200 (2300 achievable with winning silicon lottery ticket)
   gpu_freq=750 (higher values possible and relates to ram frequency)
+  over_voltage=7 (maybe 6 or 8)
+  force_turbo=1 (voids warranty)
   
 - Active Cooling
   https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
