@@ -15,6 +15,7 @@ Hardware:
 
 ![ICE Tower Raspberry Pi 4 CPU Cooler](https://thepihut.com/cdn/shop/products/ice-tower-raspberry-pi-4-cpu-cooler-52pi-ep-0107-13337351225406_600x.jpg)
 https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
+![image](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/5c663b9c-fc0a-4f49-b589-ff35fb4b5be9)
 
 - SSD
 
