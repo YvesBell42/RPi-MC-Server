@@ -1,10 +1,10 @@
 # RPi MC Server Optimisation and Automation
 
-This project describes the optimisation of a Raspberry Pi for running a Minecraft server and 
+This project describes the setup, optimisation and automation of a Raspberry Pi Minecraft server.
 
-This project includes the setup and scripts for a fully automated Minecraft server running on a Raspberry Pi. 
+Essentially everything described is optional, however I have done my best to describe the process and dependencies to prevent things going wrong if done the same.
 
-Inspiration from https://www.linuxnorth.org/minecraft/
+The Raspberry Pi 4b has an 8GB model which is more than enough to alleviate a bottleneck when it comes to running a Minecraft Server. However, a Raspberry Pi is not the ideal platform to run a Minecraft Server in the first place, but the additional RAM allows for the implementation of a RAM Disk for faster chunk loading. The speed of s
 
 Hardware:
 - Raspberry Pi 4b (8GB Model)
