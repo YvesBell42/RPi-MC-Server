@@ -45,6 +45,9 @@ Rasberry Pi 64-bit OS (Headless as GUI Optional)
  
  
   - java jdk / jre
+
+Measure server folder size
+sudo du -hs /Permanent/
  
 RAM Disk:
 
