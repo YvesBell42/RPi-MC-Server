@@ -23,7 +23,7 @@ force_turbo=1 (voids warranty)
 
 https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
 
-- SSD
+- Storage
 
 - RAM
 
