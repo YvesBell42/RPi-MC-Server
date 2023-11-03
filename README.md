@@ -4,7 +4,7 @@ This project describes the setup, optimisation and automation of a Raspberry Pi 
 
 A Raspberry Pi is not the ideal platform to run a Minecraft server, but can be perfect for a small number of friends wishing to play together. 
 
-The hardware optimisations described enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server would function fine without.
+The hardware optimisations described enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server would function fine without these optimisations.
 
 
 
