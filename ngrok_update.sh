@@ -16,12 +16,12 @@ Last=$(cat $GitDir/README.md)
 # Check if they are different.
 if [[ $Current != $Last ]]
 then
-	# Git requires active directory to be repository.
-	cd $GitDir
-	# Replace README.md with new address.
-	echo $Current > README.md
-	# Commit
-	git commit -am "Update IP"
-	# Push
-	git push -u origin main
+    # Git requires active directory to be repository.
+    cd $GitDir
+    # Replace README.md with new address.
+    echo $Current > README.md
+    # Commit
+    git commit -am "Update IP"
+    # Push
+    git push -u origin main
 fi
