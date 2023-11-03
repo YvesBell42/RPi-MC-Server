@@ -4,7 +4,7 @@ This project describes the setup, optimisation and automation of a Raspberry Pi 
 
 A Raspberry Pi is not the ideal platform to run a Minecraft server, but can be perfect for a small number of friends wishing to play together (especially when optimised and automated). 
 
-The hardware optimisations described enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server would function fine without these optimisations.
+The optimisations described enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server would function fine without.
 
 The Raspberry Pi 4b can offer 8GB of memory which allows for a large allocation of RAM to the server, and more that could be used as a RAM Disk. Running the server off a RAM Disk means pre-generated chunks are loaded much faster, but adds some risk of data corruption if handled badly. The automation scripts have been designed to prevent associated corruption and offer regular restore points. 
 
