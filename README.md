@@ -12,11 +12,8 @@ Hardware:
   force_turbo=1 (voids warranty)
   
 - Active Cooling
-![ICE Tower Raspberry Pi 4 CPU Cooler](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/5c663b9c-fc0a-4f49-b589-ff35fb4b5be9)
+![ICE Tower Raspberry Pi 4 CPU Cooler](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/40789c81-c50c-480e-8851-6c23017c478f)
 https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
-
-![image](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/40789c81-c50c-480e-8851-6c23017c478f)
-
 
 - SSD
 
