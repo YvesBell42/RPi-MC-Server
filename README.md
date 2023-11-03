@@ -16,7 +16,7 @@ Overclocking the Raspbery Pi has the most impactful performance improvement but 
 
 Unfortunately for me but now hopefully fortunate for someone else, when I changed internet service provider I found myself stuck behind a Carrier Grade NAT, and unable to use port forwarding effectively. This led me to look into reverse tunnels and proxies, where I found the service ngrok (https://ngrok.com). ngrok can be used to access servers without port forwarding, but the addresses are dynamic and change seemingly randomly. They do offer static addresses through a subscription, but as I could have much easier (and cheaper) bought a subscription to a Minecraft server hosting, I decided to go around this. Instead automatically polling ngrok for a change in address, and using Git to update the README of an empty GitHub repository. This allows friends to have easy access to the latest address without help from you (https://github.com/YvesBell42/RPi-PaperMC).
 
-
+https://littlebigtech.net/posts/raspberry-pi-4-minecraft-server-no-port-forwarding/
 
 
 
