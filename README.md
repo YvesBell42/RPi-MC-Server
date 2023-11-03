@@ -48,6 +48,10 @@ Rasberry Pi 64-bit OS (Headless as GUI Optional)
 
 Measure server folder size
 sudo du -hs /Permanent/
+
+#git config credential.helper store
+#30 Days
+#git config credential.helper 'cache --timeout 2580000'
  
 RAM Disk:
 
