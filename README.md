@@ -4,6 +4,8 @@ This project describes the optimisation of a Raspberry Pi for running a Minecraf
 
 This project includes the setup and scripts for a fully automated Minecraft server running on a Raspberry Pi. 
 
+Inspiration from https://www.linuxnorth.org/minecraft/
+
 Hardware:
 - Raspberry Pi 4b (8GB Model)
 
