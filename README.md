@@ -42,5 +42,15 @@ Server Automation Scripts:
 - restart
 
   Cron Job Schedules:
-  
+  #After restart
+  @reboot bash "/home/yves/Minecraft/setup.sh"
+
+  #30th minute of each hour, e.g. 12:30, 13:30, 14:30
+  30 * * * * bash "/home/yves/Minecraft/save.sh"
+
+  #Every 6 hours, e.g. 12:00, 18:00, 24:00
+  0 */6 * * * bash "/home/yves/Minecraft/restart.sh"
+
+  #Every 5 minutes, e.g. 12:00, 12:05, 12:10 
+  */5 * * * * bash "/home/yves/Minecraft/ngrok_update.sh"
   
