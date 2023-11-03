@@ -67,11 +67,11 @@ Server Automation Scripts:
   @reboot bash "/home/yves/Minecraft/setup.sh"
 
   #30th minute of each hour, e.g. 12:30, 13:30, 14:30
-  30 * * * * bash "/home/yves/Minecraft/save.sh"
+  30 * * * * bash <PATH_TO_SAVE_SCRIPT>
 
   #Every 6 hours, e.g. 12:00, 18:00, 24:00
-  0 */6 * * * bash "/home/yves/Minecraft/restart.sh"
+  0 */6 * * * bash <PATH_TO_RESTART_SCRIPT>
 
   #Every 5 minutes, e.g. 12:00, 12:05, 12:10 
-  */5 * * * * bash "/home/yves/Minecraft/ngrok_update.sh"
+  */5 * * * * bash <PATH_TO_NGROK_UPDATE_SCRIPT>
   
