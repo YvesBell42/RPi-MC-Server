@@ -18,6 +18,11 @@ Hardware:
 
 - RAM
 
+  Software:
+  - screen
+ 
+  - PaperMC
+
 Networking:
 - SSH
 
