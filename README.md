@@ -30,6 +30,10 @@ https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
 - RAM
 
   Software:
+  - Rasberry Pi 64-bit OS (Headless as GUI Optional)
+
+ 64-bit allows for more than a GB of RAM to be allocated to a single process.
+  
   - screen
  
   - PaperMC
