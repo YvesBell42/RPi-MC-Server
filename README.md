@@ -12,8 +12,9 @@ Hardware:
   force_turbo=1 (voids warranty)
   
 - Active Cooling
-  ![ICE Tower Raspberry Pi 4 CPU Cooler]([https://myoctocat.com/assets/images/base-octocat.svg](https://thepihut.com/cdn/shop/products/ice-tower-raspberry-pi-4-cpu-cooler-52pi-ep-0107-13337351225406_600x.jpg?v=1646472437))
-  https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
+
+![ICE Tower Raspberry Pi 4 CPU Cooler]([https://myoctocat.com/assets/images/base-octocat.svg](https://thepihut.com/cdn/shop/products/ice-tower-raspberry-pi-4-cpu-cooler-52pi-ep-0107-13337351225406_600x.jpg?v=1646472437))
+https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
 
 - SSD
 
