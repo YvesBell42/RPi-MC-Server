@@ -1,6 +1,6 @@
-# RPi-MC-Automation
+# RPi-MC-Server-Optimisation-and-Automation
 
-This project includes the setup and scripts for a fully automated Minecraft server running on a Raspberry Pi 4b (8GB Model).
+This project includes the setup and scripts for a fully automated Minecraft server running on a Raspberry Pi 4b (8GB Model). 
 
 Hardware:
 - Overclocking
