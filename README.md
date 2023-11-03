@@ -10,7 +10,7 @@ The Raspberry Pi 4b can offer 8GB of memory which allows for a large allocation 
 
 The use of a RAM Disk means that the storage device only affects the speed of server start, restart, saving and backup. However, fast storage wouldn't be missed, such as from a fast USB drive, external NVMe adpated to USB3.0 (with powered HUB) or even PCIe SSD with the Raspberry Pi 5. I decided to use a ADATA XPG SX8200 Pro 256GB adpated to USB3.0 with an enclosure (https://www.amazon.co.uk/gp/product/B07TXCMQ8B) and powered hub (https://www.amazon.co.uk/RSHTECH-Aluminum-Portable-Splitter-Individual/dp/B07KFGY2CR).
 
-![XPG SX8200 Pro 256GB](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/1c658145-00e5-43f7-9613-8e7b8b0c61c1)
+![XPG SX8200 Pro 256GB](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/8fac3625-019d-489d-a00a-22da3d4dcf6a)
 
 Overclocking the Raspbery Pi has the most impactful performance improvement but will require active cooling (Raspberry Pi 5 needs cooling anyway). A small fan and/or heatsink may be enough, but I opted for the overkill ICE Tower (https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler) just in case, and because it looks cool :sunglasses:
 
