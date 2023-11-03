@@ -6,7 +6,7 @@ A Raspberry Pi is not the ideal platform to run a Minecraft server, but can be p
 
 The hardware optimisations described enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server would function fine without these optimisations.
 
-
+The Raspberry Pi 4b can offer 8GB of memory, which allows for a large allocation of RAM to the server and more that could be used as a RAM Disk. Running the server off a RAM Disk means pre-generated chunks are loaded much faster, but adds some risk and complications.
 
 
 
