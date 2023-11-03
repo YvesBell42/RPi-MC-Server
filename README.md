@@ -24,10 +24,6 @@ Unfortunately for me but now hopefully fortunate for someone else, when I change
 
 
 
-Hardware:
-- Raspberry Pi 4b (8GB Model)
-
-- Overclocking
 
 arm_freq=2200 (2300 achievable with winning silicon lottery ticket)
 
@@ -37,17 +33,9 @@ over_voltage=7 (maybe 6 or 8)
 
 force_turbo=1 (voids warranty)
   
-- Active Cooling
+Rasberry Pi 64-bit OS (Headless as GUI Optional)
 
-
-- Storage
-
-- RAM
-
-  Software:
-  - Rasberry Pi 64-bit OS (Headless as GUI Optional)
-
- 64-bit allows for more than a GB of RAM to be allocated to a single process.
+64-bit allows for more than a GB of RAM to be allocated to a single process.
   
   - screen
  
