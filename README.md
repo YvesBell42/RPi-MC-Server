@@ -42,11 +42,10 @@ https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
  
   - ChunkLoader
 
-Networking:
-- SSH
+  - Reverse Proxy (ngrok)
 
-- Reverse Proxy (ngrok)
-  https://ngrok.com/
+    https://ngrok.com/
+
 
 RAM Disk:
 
