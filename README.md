@@ -1,5 +1,7 @@
 # RPi MC Server Optimisation and Automation
 
+This project describes the optimisation of a Raspberry Pi for running a Minecraft server and 
+
 This project includes the setup and scripts for a fully automated Minecraft server running on a Raspberry Pi. 
 
 Hardware:
@@ -29,12 +31,24 @@ https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
   - screen
  
   - PaperMC
+ 
+  - java jdk / jre
 
 Networking:
 - SSH
 
 - Reverse Proxy (ngrok)
   https://ngrok.com/
+
+RAM Disk:
+
+sudo mkdir <PATH_TO_RAM_DISK_SERVER_FOLDER>
+
+sudo nano /etc/fstab
+
+tmpfs <PATH_TO_RAM_DISK_SERVER_FOLDER> tmpfs nodev,nosuid,size=1500M 0 0
+
+sudo df -h
 
 Server Automation Scripts:
 
