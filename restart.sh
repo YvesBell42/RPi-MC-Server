@@ -9,21 +9,21 @@ StartScript=<PATH_TO_START_SCRIPT>
 # Restart script can be called manually with option 'now' for instant effect.
 if [ "$1" != "now" ]
 then
-	# Use screen to tell players that the server will restart soon.
-	sudo screen -r minecraft -X stuff "$(printf '\r')say Restarting in 5 minutes!$(printf '\r')"
-	# Print for terminal if called manually.
+    # Use screen to tell players that the server will restart soon.
+    sudo screen -r minecraft -X stuff "$(printf '\r')say Restarting in 5 minutes!$(printf '\r')"
+    # Print for terminal if called manually.
     echo Server restarting in 5 minutes!
-	# Wait 4 minutes.
+    # Wait 4 minutes.
     sleep 4m
 fi
 
 if [ "$1" != "now" ]
 then
-	# Use screen to tell players that the server will restart soon.
-	sudo screen -r minecraft -X stuff "say Restarting in 60 seconds!$(printf '\r')"
-	# Print for terminal if called manually.
+    # Use screen to tell players that the server will restart soon.
+    sudo screen -r minecraft -X stuff "say Restarting in 60 seconds!$(printf '\r')"
+    # Print for terminal if called manually.
     echo Server restarting in 60 seconds!
-	# Wait 60 seconds.
+    # Wait 60 seconds.
     sleep 1m
 fi
 
@@ -36,7 +36,7 @@ sudo screen -r minecraft -X stuff "stop$(printf '\r')"
 # Wait until screen terminal has closed.
 while sudo screen -list | grep -q minecraft
 do
-	:
+    :
 done
 
 # Report a restart.
