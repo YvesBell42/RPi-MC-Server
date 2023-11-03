@@ -33,6 +33,8 @@ https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler
   - PaperMC
  
   - java jdk / jre
+ 
+  - ChunkLoader
 
 Networking:
 - SSH
