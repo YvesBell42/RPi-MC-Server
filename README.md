@@ -22,7 +22,8 @@ Unfortunately for me but now hopefully fortunate for someone else, when I change
 
 https://littlebigtech.net/posts/raspberry-pi-4-minecraft-server-no-port-forwarding/
 
-
+USB booting was supported starting with version 9-03-2020
+https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 
 
 
