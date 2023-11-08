@@ -25,6 +25,9 @@ https://littlebigtech.net/posts/raspberry-pi-4-minecraft-server-no-port-forwardi
 USB booting was supported starting with version 9-03-2020
 https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 
+COULD MAKE CHECK FOR AVAILABLE SPACE LEFT IN RAM DRIVE
+e.g. sudo df Temporary
+
 
 
 
