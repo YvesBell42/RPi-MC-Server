@@ -28,6 +28,8 @@ https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 COULD MAKE CHECK FOR AVAILABLE SPACE LEFT IN RAM DRIVE
 e.g. sudo df Temporary
 
+WHEN SAVE CALLED FROM RESTART, THE COPYING OF FILES TAKES AGES ON SLOW DRIVES,
+MEANING RESTART PROCESS IS KIND OF IN LIMBO
 
 
 
