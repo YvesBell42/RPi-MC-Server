@@ -1,10 +1,9 @@
 #!/bin/bash
-# Change these directory paths according to your setup.
-BackupDir=<PATH_TO_BACKUPS_FOLDER>
-PermDir=<PATH_TO_PERSISTENT_SERVER_FOLDER>
-SaveScript=<PATH_TO_SAVE_SCRIPT>
-BackupScript=<PATH_TO_BACKUP_SCRIPT>
-StartScript=<PATH_TO_START_SCRIPT>
+BackupDir=/home/"$USER"/RPi-MC-Server/Backups
+PersistentDir=/home/"$USER"/RPi-MC-Server/Persistent
+SaveScript=/home/"$USER"/RPi-MC-Server/save.sh
+BackupScript=/home/"$USER"/RPi-MC-Server/backup.sh
+StartScript=/home/"$USER"/RPi-MC-Server/start.sh
 
 # Restart script can be called manually with option 'now' for instant effect.
 if [ "$1" != "now" ]
@@ -40,7 +39,7 @@ do
 done
 
 # Report a restart.
-date >> "$PermDir/restarts.txt"
+date >> "$PersistentDir/restarts.txt"
 
 # Call backup script.
 sudo bash $BackupScript
