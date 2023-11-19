@@ -1,6 +1,5 @@
 #!/bin/bash
-# Change the directory path according to your setup.
-GitDir=<PATH_TO_GIT_REPO>
+GitDir=/home/"$USER"/RPi-MC-Server
 
 # Grab tunnel information from ngrok localhost page.
 curl -s http://localhost:4040/api/tunnels/minecraft-server > ngrok_tunnel.txt
