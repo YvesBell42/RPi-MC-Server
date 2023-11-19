@@ -1,4 +1,4 @@
-# RPi MC Server Optimisation and Automation with Reverse Proxy
+# Raspberry Pi Minecraft Server with Optimisation, Automation and Reverse Proxy
 
 This project describes the setup, optimisation and automation of a Raspberry Pi Minecraft server with a reverse proxy.
 
