@@ -31,7 +31,7 @@ Unfortunately for me but now hopefully fortunate for someone else, when I change
 USB booting was supported starting with version 9-03-2020
 https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 
-```shell
+```bash
 sudo apt install git -y
 
 git clone https://github.com/YvesBell42/RPi-MC-Server.git
