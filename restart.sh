@@ -44,9 +44,7 @@ date >> "$PersistentDir/restarts.txt"
 # Call backup script.
 sudo bash $BackupScript
 
-# Optional reboot on restart.
-# If crontab is setup correctly the server would start on reboot.
-#sudo reboot
-
-# Call server start script.
-sudo bash $StartScript
+# Reboot on restart.
+sudo reboot
+# Optional call server start script instead of reboot.
+#sudo bash $StartScript
