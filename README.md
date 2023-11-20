@@ -2,9 +2,9 @@
 
 This project describes the setup, optimisation and automation of a Raspberry Pi Minecraft server with a reverse proxy.
 
-A Raspberry Pi is not the ideal platform to run a Minecraft server, but can be perfect for a small number of friends wishing to play together (especially when optimised and automated). 
+A Raspberry Pi is not the ideal platform to run a large Minecraft server, but can be perfect for a small number of friends wishing to play together (especially when optimised and automated). 
 
-The optimisations described enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server would function fine without.
+These optimisations enable greater flexibility when it comes to the number of players, plugins or mods. However, a simple and small server may function fine without.
 
 The Raspberry Pi 4b can offer 8GB of memory which allows for a large allocation of RAM to the server, and more that could be used as a RAM Disk. Running the server off a RAM Disk means pre-generated chunks are loaded much faster, but adds some risk of data corruption if handled badly. The automation scripts have been designed to prevent associated corruption and offer regular restore points. 
 
@@ -13,6 +13,14 @@ The use of a RAM Disk means that the storage device only affects the speed of se
 ![XPG SX8200 Pro 256GB](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/8fac3625-019d-489d-a00a-22da3d4dcf6a)
 
 Overclocking the Raspbery Pi has the most impactful performance improvement but will require active cooling (Raspberry Pi 5 needs cooling anyway). A small fan and/or heatsink may be enough, but I opted for the overkill ICE Tower (https://thepihut.com/products/ice-tower-raspberry-pi-4-cpu-cooler) just in case, and because it looks cool :sunglasses:
+
+arm_freq=2200 (2300 achievable with winning silicon lottery ticket)
+
+gpu_freq=750 (higher values possible and relates to ram frequency)
+
+over_voltage=7 (maybe 6 or 8)
+
+force_turbo=1 (voids warranty)
 
 ![ICE Tower Raspberry Pi 4 CPU Cooler](https://github.com/YvesBell42/RPi-MC-Server-Optimisation-and-Automation/assets/63612338/40789c81-c50c-480e-8851-6c23017c478f)
 
@@ -41,13 +49,7 @@ e.g. sudo df Temporary
 Measure server folder size
 sudo du -hs /Permanent/
 
-arm_freq=2200 (2300 achievable with winning silicon lottery ticket)
 
-gpu_freq=750 (higher values possible and relates to ram frequency)
-
-over_voltage=7 (maybe 6 or 8)
-
-force_turbo=1 (voids warranty)
   
 Rasberry Pi 64-bit OS (Headless as GUI Optional)
 
