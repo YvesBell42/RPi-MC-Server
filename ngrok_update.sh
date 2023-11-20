@@ -1,5 +1,5 @@
 #!/bin/bash
-GitDir=/home/"$USER"/RPi-MC-Server
+GitDir=/home/"$(whoami)"/RPi-MC-Server
 
 # Grab tunnel information from ngrok localhost page.
 curl -s http://localhost:4040/api/tunnels/minecraft-server > ngrok_tunnel.txt
