@@ -51,10 +51,11 @@ then
 	sudo echo WantedBy=multi-user.target >> /etc/systemd/system/ngrok-client.service
 
 	# Start ngrok service.
+ 	#SOMETHING HERE IS FUCKED
 	sudo systemctl daemon-reload
 	sudo systemctl enable ngrok-client
 	sudo systemctl start ngrok-client
-	echo systemctl status ngrok-client.service
+	systemctl status ngrok-client.service
 
   	# Check if setup GitHub repository?
 	read -p "Setup GitHub repository? (Y/N): " github
