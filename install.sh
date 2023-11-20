@@ -65,6 +65,7 @@ then
 	sudo systemctl start ngrok-client
 	systemctl status ngrok-client.service
 
+	#BREAKS BEFORE NEXT BLOCK
   	# Check if setup GitHub repository?
 	read -p "Setup GitHub repository? (Y/N): " github
 	if [[ $github  == [yY] ]]
