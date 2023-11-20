@@ -1,9 +1,9 @@
 #!/bin/bash
-BackupDir=/home/"$USER"/RPi-MC-Server/Backups
-PersistentDir=/home/"$USER"/RPi-MC-Server/Persistent
-SaveScript=/home/"$USER"/RPi-MC-Server/save.sh
-BackupScript=/home/"$USER"/RPi-MC-Server/backup.sh
-StartScript=/home/"$USER"/RPi-MC-Server/start.sh
+BackupDir=/home/"$(whoami)"/RPi-MC-Server/Backups
+PersistentDir=/home/"$(whoami)"/RPi-MC-Server/Persistent
+SaveScript=/home/"$(whoami)"/RPi-MC-Server/save.sh
+BackupScript=/home/"$(whoami)"/RPi-MC-Server/backup.sh
+StartScript=/home/"$(whoami)"/RPi-MC-Server/start.sh
 
 # Restart script can be called manually with option 'now' for instant effect.
 if [ "$1" != "now" ]
