@@ -28,6 +28,9 @@ https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 COULD MAKE CHECK FOR AVAILABLE SPACE LEFT IN RAM DRIVE
 e.g. sudo df Temporary
 
+Measure server folder size
+sudo du -hs /Permanent/
+
 WHEN SAVE CALLED FROM RESTART, THE COPYING OF FILES TAKES AGES ON SLOW DRIVES,
 MEANING RESTART PROCESS IS KIND OF IN LIMBO,
 ALSO MIGHT BE AN ISSUE THAT MANUALLY ATACHING SCREEN STOPS SCRIPT INPUT
@@ -53,49 +56,27 @@ Rasberry Pi 64-bit OS (Headless as GUI Optional)
  
   - java jdk / jre
 
-Measure server folder size
-sudo du -hs /Permanent/
+
 
 #git config credential.helper store
 #30 Days
 #git config credential.helper 'cache --timeout 2580000'
- 
-RAM Disk:
 
-sudo mkdir <PATH_TO_RAM_DISK_SERVER_FOLDER>
 
-sudo nano /etc/fstab
+Cron Job Schedules:
+#After restart
 
-tmpfs <PATH_TO_RAM_DISK_SERVER_FOLDER> tmpfs nodev,nosuid,size=1500M 0 0
+@reboot bash /home/"$USER"/RPi-MC-Server/setup.sh
 
-sudo df -h
-
-Server Automation Scripts:
-
-- setup
-
-- start
-
-- save
-
-- backup
-
-- restart
-
-  Cron Job Schedules:
-  #After restart
+#30th minute of each hour, e.g. 12:30, 13:30, 14:30
   
-  @reboot bash /home/"$USER"/RPi-MC-Server/setup.sh
+30 * * * * bash /home/"$USER"/RPi-MC-Server/save.sh
 
-  #30th minute of each hour, e.g. 12:30, 13:30, 14:30
+#Every 6 hours, e.g. 12:00, 18:00, 24:00
   
-  30 * * * * bash /home/"$USER"/RPi-MC-Server/save.sh
+0 */6 * * * bash /home/"$USER"/RPi-MC-Server/restart.sh
 
-  #Every 6 hours, e.g. 12:00, 18:00, 24:00
+#Every 5 minutes, e.g. 12:00, 12:05, 12:10
   
-  0 */6 * * * bash /home/"$USER"/RPi-MC-Server/restart.sh
-
-  #Every 5 minutes, e.g. 12:00, 12:05, 12:10
-  
-  */5 * * * * bash /home/"$USER"/RPi-MC-Server/ngrok_update.sh
+*/5 * * * * bash /home/"$USER"/RPi-MC-Server/ngrok_update.sh
   
