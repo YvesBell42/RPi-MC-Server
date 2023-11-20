@@ -73,22 +73,4 @@ Rasberry Pi 64-bit OS (Headless as GUI Optional)
 #git config credential.helper store
 #30 Days
 #git config credential.helper 'cache --timeout 2580000'
-
-
-Cron Job Schedules:
-#After restart
-
-@reboot bash /home/"$USER"/RPi-MC-Server/setup.sh
-
-#30th minute of each hour, e.g. 12:30, 13:30, 14:30
-  
-30 * * * * bash /home/"$USER"/RPi-MC-Server/save.sh
-
-#Every 6 hours, e.g. 12:00, 18:00, 24:00
-  
-0 */6 * * * bash /home/"$USER"/RPi-MC-Server/restart.sh
-
-#Every 5 minutes, e.g. 12:00, 12:05, 12:10
-  
-*/5 * * * * bash /home/"$USER"/RPi-MC-Server/ngrok_update.sh
   
