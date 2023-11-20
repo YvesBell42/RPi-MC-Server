@@ -32,6 +32,10 @@ USB booting was supported starting with version 9-03-2020
 https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 
 ```bash
+sudo apt update
+
+sudo apt upgrade -y
+
 sudo apt install git -y
 
 git clone https://github.com/YvesBell42/RPi-MC-Server.git
