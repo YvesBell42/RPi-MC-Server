@@ -59,6 +59,7 @@ then
 	sudo echo WantedBy=multi-user.target >> /etc/systemd/system/ngrok-client.service
 
 	# Start ngrok service.
+ 	#Created symlink /etc/systemd/system/multi-user.target.wants/ngrok-client.service 
  	#SOMETHING HERE IS FUCKED
 	sudo systemctl daemon-reload
 	sudo systemctl enable ngrok-client
