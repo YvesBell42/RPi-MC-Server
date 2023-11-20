@@ -44,8 +44,8 @@ then
 	echo "    minecraft-server:" >>  /root/.config/ngrok/ngrok.yml
 	echo "        proto: tcp" >>  /root/.config/ngrok/ngrok.yml
 	echo "        addr: 25565" >>  /root/.config/ngrok/ngrok.yml
-	echo "        bind-tls: true" >>  /root/.config/ngrok/ngrok.yml
-	echo "        console_ui: false" >>  /root/.config/ngrok/ngrok.yml
+	#echo "        bind-tls: true" >>  /root/.config/ngrok/ngrok.yml
+	#echo "        console_ui: false" >>  /root/.config/ngrok/ngrok.yml
 
 	# Create a service for ngrok.
 	sudo echo [Unit] > /etc/systemd/system/ngrok-client.service
