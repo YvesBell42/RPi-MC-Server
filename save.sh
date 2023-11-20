@@ -1,7 +1,7 @@
 #!/bin/bash
-RAM_DiskDir=/home/"$(whoami)"/RPi-MC-Server/RAM_Disk
-PersistentDir=/home/"$(whoami)"/RPi-MC-Server/Persistent
-BackupScript=/home/"$(whoami)"/RPi-MC-Server/backup.sh
+RAM_DiskDir=/home/<USER>/RPi-MC-Server/RAM_Disk
+PersistentDir=/home/<USER>/RPi-MC-Server/Persistent
+BackupScript=/home/<USER>/RPi-MC-Server/backup.sh
 
 # Check if minecraft server process is found in screen terminals.
 if ! sudo screen -list | grep -q minecraft
