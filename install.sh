@@ -105,15 +105,15 @@ sudo crontab -l > tmpcron
 
 # Append cron commands.
 #After restart.
-echo @reboot bash /home/"$SUDO_USER"/RPi-MC-Server/setup.sh >> tmpcron
+echo "@reboot bash /home/"$SUDO_USER"/RPi-MC-Server/setup.sh" >> tmpcron
 #30th minute of each hour, e.g. 12:30, 13:30, 14:30.
-echo 30 * * * * bash /home/"$SUDO_USER"/RPi-MC-Server/save.sh >> tmpcron
+echo "30 * * * * bash /home/"$SUDO_USER"/RPi-MC-Server/save.sh" >> tmpcron
 #Every 6 hours, e.g. 12:00, 18:00, 24:00.
-echo 0 */6 * * * bash /home/"$SUDO_USER"/RPi-MC-Server/restart.sh >> tmpcron
+echo "0 */6 * * * bash /home/"$SUDO_USER"/RPi-MC-Server/restart.sh" >> tmpcron
 if [[ $ngrok  == [yY] ]]
 then
 	#Every 5 minutes, e.g. 12:00, 12:05, 12:10.
-	echo */5 * * * * bash /home/"$SUDO_USER"/RPi-MC-Server/ngrok_update.sh >> tmpcron
+	echo "*/5 * * * * bash /home/"$SUDO_USER"/RPi-MC-Server/ngrok_update.sh" >> tmpcron
 fi
 
 # Install new cron file.
