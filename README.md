@@ -84,14 +84,18 @@ Server Automation Scripts:
 
   Cron Job Schedules:
   #After restart
-  @reboot bash "/home/yves/Minecraft/setup.sh"
+  
+  @reboot bash /home/"$USER"/RPi-MC-Server/setup.sh
 
   #30th minute of each hour, e.g. 12:30, 13:30, 14:30
-  30 * * * * bash <PATH_TO_SAVE_SCRIPT>
+  
+  30 * * * * bash /home/"$USER"/RPi-MC-Server/save.sh
 
   #Every 6 hours, e.g. 12:00, 18:00, 24:00
-  0 */6 * * * bash <PATH_TO_RESTART_SCRIPT>
+  
+  0 */6 * * * bash /home/"$USER"/RPi-MC-Server/restart.sh
 
-  #Every 5 minutes, e.g. 12:00, 12:05, 12:10 
-  */5 * * * * bash <PATH_TO_NGROK_UPDATE_SCRIPT>
+  #Every 5 minutes, e.g. 12:00, 12:05, 12:10
+  
+  */5 * * * * bash /home/"$USER"/RPi-MC-Server/ngrok_update.sh
   
