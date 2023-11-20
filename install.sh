@@ -31,21 +31,29 @@ then
 	# Setup ngrok
 	read -p "Enter ngrok authtoken: " authtoken
 	./ngrok authtoken $authtoken
-	#ngrok config check
+	./ngrok config check
+ 	#Authtoken saved to configuration file: /root/.config/ngrok/ngrok.yml
   	# Create ngrok config for minecraft server.
-	echo "tunnels:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	echo "    minecraft-server:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	echo "        proto: tcp" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	echo "        addr: 25565" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	echo "        bind-tls: true" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	echo "        console_ui: false" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
+	#echo "tunnels:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
+	#echo "    minecraft-server:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
+	#echo "        proto: tcp" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
+	#echo "        addr: 25565" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
+	#echo "        bind-tls: true" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
+	#echo "        console_ui: false" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
+ 	echo "tunnels:" >>  /root/.config/ngrok/ngrok.yml
+	echo "    minecraft-server:" >>  /root/.config/ngrok/ngrok.yml
+	echo "        proto: tcp" >>  /root/.config/ngrok/ngrok.yml
+	echo "        addr: 25565" >>  /root/.config/ngrok/ngrok.yml
+	echo "        bind-tls: true" >>  /root/.config/ngrok/ngrok.yml
+	echo "        console_ui: false" >>  /root/.config/ngrok/ngrok.yml
 
 	# Create a service for ngrok.
 	sudo echo [Unit] > /etc/systemd/system/ngrok-client.service
 	sudo echo Description=ngrok client >> /etc/systemd/system/ngrok-client.service
 	sudo echo After=network.target >> /etc/systemd/system/ngrok-client.service
 	sudo echo [Service] >> /etc/systemd/system/ngrok-client.service
-	sudo echo ExecStart=/home/$SUDO_USER/ngrok start --all -config /home/$SUDO_USER/.config/ngrok/ngrok.yml >> /etc/systemd/system/ngrok-client.service
+	#sudo echo ExecStart=/home/$SUDO_USER/ngrok start --all -config /home/$SUDO_USER/.config/ngrok/ngrok.yml >> /etc/systemd/system/ngrok-client.service
+ 	sudo echo ExecStart=/home/$SUDO_USER/ngrok start --all -config /root/.config/ngrok/ngrok.yml >> /etc/systemd/system/ngrok-client.service
 	sudo echo Restart=on-abort >> /etc/systemd/system/ngrok-client.service
 	sudo echo [Install] >> /etc/systemd/system/ngrok-client.service
 	sudo echo WantedBy=multi-user.target >> /etc/systemd/system/ngrok-client.service
