@@ -1,4 +1,5 @@
 #!/bin/bash
+# <USER> will be replaced with install script.
 RAM_DiskDir=/home/<USER>/RPi-MC-Server/RAM_Disk
 PersistentDir=/home/<USER>/RPi-MC-Server/Persistent
 BackupScript=/home/<USER>/RPi-MC-Server/backup.sh
