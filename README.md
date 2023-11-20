@@ -25,10 +25,9 @@ sudo apt install git -y
 
 git clone https://github.com/YvesBell42/RPi-MC-Server.git
 
-THERE'S AN ISSUE WITH $USER, $SUDO_USER AND $(whoami) WHEN RUN FROM SUDO OR SUDO CRONTAB
+cd RPi-MC-Server
 
-POSSIBLE SOLUTION: MAKE INSTALL.SH WRITE THE CORRECT $USER TO THE DIRS OF EACH FILE, AND CORRESPONDINGLY MODIFY CRONTAB FILE
-
+sudo bash install.sh
 
 
 
@@ -42,13 +41,6 @@ e.g. sudo df Temporary
 
 Measure server folder size
 sudo du -hs /Permanent/
-
-WHEN SAVE CALLED FROM RESTART, THE COPYING OF FILES TAKES AGES ON SLOW DRIVES,
-MEANING RESTART PROCESS IS KIND OF IN LIMBO,
-ALSO MIGHT BE AN ISSUE THAT MANUALLY ATACHING SCREEN STOPS SCRIPT INPUT
-
-
-
 
 
 arm_freq=2200 (2300 achievable with winning silicon lottery ticket)
