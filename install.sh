@@ -63,7 +63,7 @@ then
 		# Get user and repository details.
 		read -p "Enter GitHub email address: " email
 		read -p "Enter GitHub username: " username
-   		 read -p "Enter GitHub repository URL: " url
+   		read -p "Enter GitHub repository URL: " url
     		read -p "Enter valid Personal Access Token: " pat
 
     		# Set git config details.
