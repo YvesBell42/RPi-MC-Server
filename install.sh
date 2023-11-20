@@ -23,7 +23,7 @@ sudo apt install screen -y
 read -p "Install ngrok? (Y/N): " ngrok
 if [[ $ngrok  == [yY] ]]
 then
-  # Download ngrok.
+	# Download ngrok.
 	wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
 	#Unzip binary.
 	tar -xvzf ngrok-v3-stable-linux-arm64.tgz
@@ -32,7 +32,7 @@ then
 	read -p "Enter ngrok authtoken: " authtoken
 	./ngrok authtoken $authtoken
 	#ngrok config check
-  # Create ngrok config for minecraft server.
+  	# Create ngrok config for minecraft server.
 	echo "tunnels:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
 	echo "    minecraft-server:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
 	echo "        proto: tcp" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
@@ -56,21 +56,21 @@ then
 	sudo systemctl start ngrok-client
 	echo systemctl status ngrok-client.service
 
-  # Check if setup GitHub repository?
+  	# Check if setup GitHub repository?
 	read -p "Setup GitHub repository? (Y/N): " github
 	if [[ $github  == [yY] ]]
 	then
 		# Get user and repository details.
 		read -p "Enter GitHub email address: " email
 		read -p "Enter GitHub username: " username
-    read -p "Enter GitHub repository URL: " url
-    read -p "Enter valid Personal Access Token: " pat
+   		 read -p "Enter GitHub repository URL: " url
+    		read -p "Enter valid Personal Access Token: " pat
 
-    # Set git config details.
+    		# Set git config details.
 		git config --global user.email $email
 		git config --global user.name $username
-    git config --global credential.helper store
-    git config --global user.password $pat
+    		git config --global credential.helper store
+    		git config --global user.password $pat
 		
 		# Create repository directory.
 		cd /home/"$SUDO_USER"/RPi-MC-Server
@@ -78,10 +78,10 @@ then
 		cd ngrok_git
 		git init
 
-    # Link local repo to remote repo.
+    		# Link local repo to remote repo.
 		git remote add origin $url
 		git remote -v
-    # Push README.md
+    		# Push README.md
 		touch README.md
 		git add README.md
 		git commit -am "init"
