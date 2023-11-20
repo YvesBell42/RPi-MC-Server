@@ -31,13 +31,13 @@ Unfortunately for me but now hopefully fortunate for someone else, when I change
 USB booting was supported starting with version 9-03-2020
 https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 
-sudo apt install git -y
+```sudo apt install git -y
 
 git clone https://github.com/YvesBell42/RPi-MC-Server.git
 
 cd RPi-MC-Server
 
-sudo bash install.sh
+sudo bash install.sh```
 
 https://littlebigtech.net/posts/raspberry-pi-4-minecraft-server-no-port-forwarding/
 
