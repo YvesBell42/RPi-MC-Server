@@ -28,14 +28,40 @@ A PaperMC (https://papermc.io/) server performs better than the native jar files
 
 Unfortunately for me but now hopefully fortunate for someone else, when I changed internet service provider I found myself stuck behind a Carrier Grade NAT, and unable to use port forwarding effectively. This led me to look into reverse tunnels and proxies, where I found the service ngrok (https://ngrok.com). ngrok can be used to access servers without port forwarding, but the addresses are dynamic and change seemingly randomly. They do offer static addresses through a subscription, but as I could have much easier (and cheaper) bought a subscription to a Minecraft server hosting plan, I decided not to. Instead automatically polling ngrok for a change in address, and using Git to update the README of an empty GitHub repository. This gives easy access to the latest address when it changes (https://github.com/YvesBell42/RPi-MC-Server-ngrok).
 
-USB booting was supported starting with version 9-03-2020
-https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
 
+
+As always...
 ```bash
 sudo apt update
 
-sudo apt upgrade -y
+sudo apt-full upgrade -y
 
+sudo reboot
+```
+
+USB booting was supported starting with version 9-03-2020
+https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd
+```bash
+vcgencmd bootloader_version
+
+sudo rpi-eeprom-update
+sudo rpi-eeprom-update -a
+sudo reboot
+
+sudo rpi-eeprom-config --edit
+```
+
+BOOT_ORDER
+1 means sd, 4 means usb, f means retry
+recommend 0xf41
+which means try sd, then usb then retry.
+
+make changes using
+```
+sudo -E rpi-eeprom-config
+```
+
+```bash
 sudo apt install git -y
 
 git clone https://github.com/YvesBell42/RPi-MC-Server.git
@@ -46,6 +72,9 @@ sudo bash install.sh
 ```
 
 https://littlebigtech.net/posts/raspberry-pi-4-minecraft-server-no-port-forwarding/
+
+
+
 
 
 
