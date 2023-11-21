@@ -64,7 +64,7 @@ then
 	sudo systemctl daemon-reload
 	sudo systemctl enable ngrok-client
 	sudo systemctl start ngrok-client
-	systemctl status ngrok-client.service
+	#systemctl status ngrok-client.service
 
 	#BREAKS BEFORE NEXT BLOCK
   	# Check if setup GitHub repository?
