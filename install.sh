@@ -5,6 +5,11 @@ mkdir /home/"$SUDO_USER"/RPi-MC-Server/Persistent
 mkdir /home/"$SUDO_USER"/RPi-MC-Server/RAM_Disk
 mkdir /home/"$SUDO_USER"/RPi-MC-Server/Backups
 
+# Fix permissions.
+sudo chmod 777 Persistent
+sudo chmod 777 RAM_Disk
+sudo chmod 777 Backups
+
 # Create RAM Disk (1500MB).
 sudo su -c "echo tmpfs /home/"$SUDO_USER"/RPi-MC-Server/RAM_Disk tmpfs nodev,nosuid,size=1500M 0 0 >> /etc/fstab"
 
@@ -28,6 +33,7 @@ then
 	# Unzip binary.
 	tar -xvzf ngrok-v3-stable-linux-arm64.tgz
  	rm ngrok-v3-stable-linux-arm64.tgz --force
+  	sudo chmod 777 ngrok
 
 	# Setup ngrok
 	read -p "Enter ngrok authtoken: " authtoken
@@ -39,8 +45,6 @@ then
 	echo "    minecraft-server:" >>  /root/.config/ngrok/ngrok.yml
 	echo "        proto: tcp" >>  /root/.config/ngrok/ngrok.yml
 	echo "        addr: 25565" >>  /root/.config/ngrok/ngrok.yml
-	#echo "        bind-tls: true" >>  /root/.config/ngrok/ngrok.yml
-	#echo "        console_ui: false" >>  /root/.config/ngrok/ngrok.yml
 
 	# Create a service for ngrok.
 	sudo echo [Unit] > /etc/systemd/system/ngrok-client.service
@@ -63,13 +67,15 @@ then
 	then
 		# Get user and repository details.
 		read -p "Enter GitHub email address: " email
+  		read -p "Enter GitHub username: " username
    		read -p "Enter GitHub repository URL: " url
 
+		# Enable credential storing.
+      		git config --global credential.helper store
+  
     		# Set git config details.
 		git config --global user.email $email
-    		
-      		# Enable credential storing.
-      		git config --global credential.helper store
+ 		git config --global user.name $username
 		
 		# Create repository directory.
 		cd /home/"$SUDO_USER"/RPi-MC-Server
