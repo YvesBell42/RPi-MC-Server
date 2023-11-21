@@ -34,12 +34,6 @@ then
 	./ngrok config check
  	#Authtoken saved to configuration file: /root/.config/ngrok/ngrok.yml
   	# Create ngrok config for minecraft server.
-	#echo "tunnels:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	#echo "    minecraft-server:" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	#echo "        proto: tcp" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	#echo "        addr: 25565" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	#echo "        bind-tls: true" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
-	#echo "        console_ui: false" >>  /home/$SUDO_USER/.config/ngrok/ngrok.yml
  	echo "tunnels:" >>  /root/.config/ngrok/ngrok.yml
 	echo "    minecraft-server:" >>  /root/.config/ngrok/ngrok.yml
 	echo "        proto: tcp" >>  /root/.config/ngrok/ngrok.yml
@@ -52,21 +46,16 @@ then
 	sudo echo Description=ngrok client >> /etc/systemd/system/ngrok-client.service
 	sudo echo After=network.target >> /etc/systemd/system/ngrok-client.service
 	sudo echo [Service] >> /etc/systemd/system/ngrok-client.service
-	#sudo echo ExecStart=/home/$SUDO_USER/RPi-MC-Server/ngrok start --all -config /home/$SUDO_USER/.config/ngrok/ngrok.yml >> /etc/systemd/system/ngrok-client.service
  	sudo echo ExecStart=/home/$SUDO_USER/RPi-MC-Server/ngrok start --all -config /root/.config/ngrok/ngrok.yml >> /etc/systemd/system/ngrok-client.service
 	sudo echo Restart=on-abort >> /etc/systemd/system/ngrok-client.service
 	sudo echo [Install] >> /etc/systemd/system/ngrok-client.service
 	sudo echo WantedBy=multi-user.target >> /etc/systemd/system/ngrok-client.service
 
 	# Start ngrok service.
- 	#Created symlink /etc/systemd/system/multi-user.target.wants/ngrok-client.service 
- 	#SOMETHING HERE IS FUCKED
 	sudo systemctl daemon-reload
 	sudo systemctl enable ngrok-client
 	sudo systemctl start ngrok-client
-	#systemctl status ngrok-client.service
 
-	#BREAKS BEFORE NEXT BLOCK
   	# Check if setup GitHub repository?
 	read -p "Setup GitHub repository? (Y/N): " github
 	if [[ $github  == [yY] ]]
@@ -77,7 +66,13 @@ then
    		read -p "Enter GitHub repository URL: " url
     		read -p "Enter GitHub Personal Access Token: " pat
 
+    		# Set git config details.
+		git config --global user.email $email
+		git config --global user.name $username
     		
+      		# Doesn't seem to work.
+    		git config --global user.password $pat
+      		git config --global credential.helper store
 		
 		# Create repository directory.
 		cd /home/"$SUDO_USER"/RPi-MC-Server
@@ -89,14 +84,7 @@ then
 		git remote add origin $url
 		git remote -v
 
-		# Set git config details.
-		git config --global user.email $email
-		git config --global user.name $username
-    		git config --global credential.helper store
-      		# Doesn't seem to work.
-		#Changed order to come after "remote add"
-    		git config --global user.password $pat
-  
+		
     		# Push README.md
 		touch README.md
 		git add README.md
