@@ -60,6 +60,8 @@ then
 	sudo systemctl daemon-reload
 	sudo systemctl enable ngrok-client
 	sudo systemctl start ngrok-client
+ 	# Check if service running.
+  	#sudo systemctl status ngrok-client.service
 
   	# Check if setup GitHub repository?
 	read -p "Setup GitHub repository? (Y/N): " github
