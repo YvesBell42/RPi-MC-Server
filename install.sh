@@ -83,7 +83,6 @@ then
     		# Link local repo to remote repo.
 		git remote add origin $url
 		git remote -v
-
 		
     		# Push README.md
 		touch README.md
