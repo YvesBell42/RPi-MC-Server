@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Create directories.
-mkdir /home/"$SUDO_USER"/RPi-MC-Server/Persistent
-mkdir /home/"$SUDO_USER"/RPi-MC-Server/RAM_Disk
-mkdir /home/"$SUDO_USER"/RPi-MC-Server/Backups
+mkdir Persistent
+mkdir RAM_Disk
+mkdir Backups
 
 # Fix permissions.
-sudo chmod 777 Persistent
-sudo chmod 777 RAM_Disk
-sudo chmod 777 Backups
+sudo chown $SUDO_USER Persistent
+sudo chown $SUDO_USER RAM_Disk
+sudo chown $SUDO_USER Backups
 
 # Create RAM Disk (1500MB).
 sudo su -c "echo tmpfs /home/"$SUDO_USER"/RPi-MC-Server/RAM_Disk tmpfs nodev,nosuid,size=1500M 0 0 >> /etc/fstab"
@@ -33,7 +33,7 @@ then
 	# Unzip binary.
 	tar -xvzf ngrok-v3-stable-linux-arm64.tgz
  	rm ngrok-v3-stable-linux-arm64.tgz --force
-  	sudo chmod 777 ngrok
+  	sudo chown $SUDO_USER ngrok
 
 	# Setup ngrok
 	read -p "Enter ngrok authtoken: " authtoken
