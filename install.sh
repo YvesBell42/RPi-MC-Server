@@ -51,7 +51,7 @@ then
 	sudo echo Description=ngrok client >> /etc/systemd/system/ngrok-client.service
 	sudo echo After=network.target >> /etc/systemd/system/ngrok-client.service
 	sudo echo [Service] >> /etc/systemd/system/ngrok-client.service
- 	sudo echo ExecStart=/home/$SUDO_USER/RPi-MC-Server/ngrok start --all -config /root/.config/ngrok/ngrok.yml >> /etc/systemd/system/ngrok-client.service
+ 	sudo echo ExecStart=/home/$SUDO_USER/RPi-MC-Server/ngrok start --all --config /root/.config/ngrok/ngrok.yml >> /etc/systemd/system/ngrok-client.service
 	sudo echo Restart=on-abort >> /etc/systemd/system/ngrok-client.service
 	sudo echo [Install] >> /etc/systemd/system/ngrok-client.service
 	sudo echo WantedBy=multi-user.target >> /etc/systemd/system/ngrok-client.service
