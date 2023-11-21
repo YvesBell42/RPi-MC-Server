@@ -25,8 +25,9 @@ if [[ $ngrok  == [yY] ]]
 then
 	# Download ngrok.
 	wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
-	#Unzip binary.
+	# Unzip binary.
 	tar -xvzf ngrok-v3-stable-linux-arm64.tgz
+ 	rm ngrok-v3-stable-linux-arm64.tgz --force
 
 	# Setup ngrok
 	read -p "Enter ngrok authtoken: " authtoken
@@ -89,7 +90,7 @@ then
 fi
 
 # Download latest PaperMC.
-cd Persistent
+cd /home/$SUDO_USER/RPi-MC-Server/Persistent
 version="1.20.2"
 latest_build="297"
 wget https://api.papermc.io/v2/projects/paper/versions/"$version"/builds/"$latest_build"/downloads/paper-"$version"-"$latest_build".jar
