@@ -75,7 +75,7 @@ then
 		read -p "Enter GitHub email address: " email
 		read -p "Enter GitHub username: " username
    		read -p "Enter GitHub repository URL: " url
-    		read -p "Enter valid Personal Access Token: " pat
+    		read -p "Enter GitHub Personal Access Token: " pat
 
     		
 		
