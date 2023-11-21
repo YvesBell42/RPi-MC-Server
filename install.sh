@@ -77,11 +77,7 @@ then
    		read -p "Enter GitHub repository URL: " url
     		read -p "Enter valid Personal Access Token: " pat
 
-    		# Set git config details.
-		git config --global user.email $email
-		git config --global user.name $username
-    		git config --global credential.helper store
-    		git config --global user.password $pat
+    		
 		
 		# Create repository directory.
 		cd /home/"$SUDO_USER"/RPi-MC-Server
@@ -92,6 +88,15 @@ then
     		# Link local repo to remote repo.
 		git remote add origin $url
 		git remote -v
+
+		# Set git config details.
+		git config --global user.email $email
+		git config --global user.name $username
+    		git config --global credential.helper store
+      		# Doesn't seem to work.
+		#Changed order to come after "remote add"
+    		git config --global user.password $pat
+  
     		# Push README.md
 		touch README.md
 		git add README.md
