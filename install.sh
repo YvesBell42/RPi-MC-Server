@@ -94,6 +94,7 @@ then
 		git add README.md
 		git commit -am "init"
 		git push origin HEAD:main --force
+  		cat /home/$SUDO_USER/.git-credentials
 	fi
 fi
 
