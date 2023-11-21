@@ -62,16 +62,12 @@ then
 	then
 		# Get user and repository details.
 		read -p "Enter GitHub email address: " email
-		read -p "Enter GitHub username: " username
    		read -p "Enter GitHub repository URL: " url
-    		read -p "Enter GitHub Personal Access Token: " pat
 
     		# Set git config details.
 		git config --global user.email $email
-		git config --global user.name $username
     		
-      		# Doesn't seem to work.
-    		git config --global user.password $pat
+      		# Enable credential storing.
       		git config --global credential.helper store
 		
 		# Create repository directory.
