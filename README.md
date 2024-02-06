@@ -35,7 +35,7 @@ As always...
 ```bash
 sudo apt update
 
-sudo apt-full upgrade -y
+sudo apt full-upgrade -y
 
 sudo reboot
 ```
