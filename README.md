@@ -75,7 +75,7 @@ sudo bash install.sh
 https://littlebigtech.net/posts/raspberry-pi-4-minecraft-server-no-port-forwarding/
 
 
-
+https://github.com/YouHaveTrouble/minecraft-optimization
 
 
 
