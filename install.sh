@@ -100,8 +100,8 @@ fi
 
 # Download latest PaperMC.
 cd /home/$SUDO_USER/RPi-MC-Server/Persistent
-version="1.20.2"
-latest_build="297"
+version="1.21.4"
+latest_build="232"
 wget https://api.papermc.io/v2/projects/paper/versions/"$version"/builds/"$latest_build"/downloads/paper-"$version"-"$latest_build".jar
 mv paper-"$version"-"$latest_build".jar server.jar
 
