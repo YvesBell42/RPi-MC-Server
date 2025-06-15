@@ -77,6 +77,8 @@ https://littlebigtech.net/posts/raspberry-pi-4-minecraft-server-no-port-forwardi
 
 https://github.com/YouHaveTrouble/minecraft-optimization
 
+https://docs.papermc.io/paper/aikars-flags/
+
 
 
 COULD MAKE CHECK FOR AVAILABLE SPACE LEFT IN RAM DRIVE
