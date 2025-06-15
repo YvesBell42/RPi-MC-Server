@@ -10,8 +10,8 @@ sudo chown $SUDO_USER Persistent
 sudo chown $SUDO_USER RAM_Disk
 sudo chown $SUDO_USER Backups
 
-# Create RAM Disk (1500MB).
-sudo su -c "echo tmpfs /home/"$SUDO_USER"/RPi-MC-Server/RAM_Disk tmpfs nodev,nosuid,size=1500M 0 0 >> /etc/fstab"
+# Create RAM Disk (2000MB).
+sudo su -c "echo tmpfs /home/"$SUDO_USER"/RPi-MC-Server/RAM_Disk tmpfs nodev,nosuid,size=2000M 0 0 >> /etc/fstab"
 
 # Modify automation script directories.
 sudo sed -i -e "s/<USER>/$SUDO_USER/g" start.sh
