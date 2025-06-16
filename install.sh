@@ -23,7 +23,10 @@ sudo sed -i -e "s/<USER>/$SUDO_USER/g" ngrok_update.sh
 
 # Install required packages.
 #sudo apt install default-jdk -y
-#sudo apt-get install ca-certificates apt-transport-https gnupg wget -y
+sudo apt-get install ca-certificates apt-transport-https gnupg wget -y
+wget -O - https://apt.corretto.aws/corretto.key | sudo gpg --dearmor -o /usr/share/keyrings/corretto-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/corretto-keyring.gpg] https://apt.corretto.aws stable main" | sudo tee /etc/apt/sources.list.d/corretto.list
+sudo apt-get update
+sudo apt-get install -y java-21-amazon-corretto-jdk libxi6 libxtst6 libxrender1
 sudo apt install screen -y
 
 # Check if install ngrok?
