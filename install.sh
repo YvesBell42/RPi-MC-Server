@@ -22,7 +22,8 @@ sudo sed -i -e "s/<USER>/$SUDO_USER/g" backup.sh
 sudo sed -i -e "s/<USER>/$SUDO_USER/g" ngrok_update.sh
 
 # Install required packages.
-sudo apt install default-jdk -y
+#sudo apt install default-jdk -y
+#sudo apt-get install ca-certificates apt-transport-https gnupg wget -y
 sudo apt install screen -y
 
 # Check if install ngrok?
