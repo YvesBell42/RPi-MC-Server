@@ -15,6 +15,7 @@ sudo su -c "echo tmpfs /home/"$SUDO_USER"/RPi-MC-Server/RAM_Disk tmpfs nodev,nos
 
 # Modify automation script directories.
 sudo sed -i -e "s/<USER>/$SUDO_USER/g" start.sh
+sudo sed -i -e "s/<USER>/$SUDO_USER/g" setup.sh
 sudo sed -i -e "s/<USER>/$SUDO_USER/g" save.sh
 sudo sed -i -e "s/<USER>/$SUDO_USER/g" restart.sh
 sudo sed -i -e "s/<USER>/$SUDO_USER/g" backup.sh
