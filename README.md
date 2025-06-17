@@ -1,5 +1,9 @@
 # Raspberry Pi Minecraft Server with Optimisation, Automation and Reverse Proxy
 
+*TODO:
+Make non root across scripts.
+Make RAM Disk an option on install.
+
 This project describes the setup, optimisation and automation of a Raspberry Pi Minecraft server with a reverse proxy.
 
 A Raspberry Pi is not the ideal platform to run a large Minecraft server, but can be perfect for a small number of friends wishing to play together (especially when optimised and automated). 
