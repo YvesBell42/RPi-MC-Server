@@ -4,5 +4,5 @@ BackupDir=/home/<USER>/RPi-MC-Server/Backups
 PersistentDir=/home/<USER>/RPi-MC-Server/Persistent
 
 # Zip persistent server files with time and date.
-sudo zip -r "$BackupDir/world-$(date +%M-%H-%d-%m-%Y).zip" "$PersistentDir/world"
+sudo zip -r "$BackupDir/world-$(date +%M-%H-%d-%m-%Y).zip" "$PersistentDir/world" "$PersistentDir/world_nether" "$PersistentDir/world_the_end"
 
